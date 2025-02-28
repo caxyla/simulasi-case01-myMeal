@@ -25,13 +25,17 @@ public class Food {
 		
 	}
 	
-	public void getIngredients() {
-		
-		for(Ingredient ingredient : ingredients) {
-			System.out.print(ingredient.getName() + ", ");
+		public void getIngredients() {
+			
+			System.out.print(ingredients.getFirst());
+			
+	        for (int i = 1; i < ingredients.size(); i++) {
+	            System.out.print(", " + ingredients.get(i).getName());
+	        }
+			
+			
+			System.out.println("\n----------------------------------------------------------------------------------------------------");
 		}
-		System.out.println("\n----------------------------------------------------------------------------------------------------");
-	}
 
 	public String getName() {
 		return name;
