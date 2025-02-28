@@ -8,8 +8,7 @@ public class Application {
 	HashSet<User> users;
 	ArrayList<Ingredient> ingredients;
 	ArrayList<Order> ordered;
-	Order orders;
-	
+
 	public Application() {
 		
 		foods = new ArrayList<Food>();
@@ -54,8 +53,8 @@ public class Application {
 
 	public void order(User user, Food food, String date) {
 	
-		orders = new Order(user, food, date); 
-		ordered.add(orders);	// kenapa ini gabisa ya
+		
+		ordered.add(new Order(user, food, date));	
 		System.out.println(user.getName() + " ordered " + food.getName() + " on " + date);
 		
 	}

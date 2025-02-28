@@ -27,10 +27,13 @@ public class Food {
 	
 		public void getIngredients() {
 			
-			System.out.print(ingredients.getFirst());
+			
 			
 	        for (int i = 1; i < ingredients.size(); i++) {
-	            System.out.print(", " + ingredients.get(i).getName());
+	            System.out.print(ingredients.get(i).getName());
+	            if (i != ingredients.size()-1) {
+	            	System.out.print(", ");
+	            }
 	        }
 			
 			
